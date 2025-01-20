@@ -18,15 +18,13 @@ Retired maintainer: [@zerolfx][].
 
 0. Ensure your Emacs version is at least 27, the dependency package `editorconfig` ([melpa](https://melpa.org/#/editorconfig)) and `jsonrpc` ([elpa](https://elpa.gnu.org/packages/jsonrpc.html), >= 1.0.14) are both installed.
 
-1. Install [Node.js][] v18+. (You can specify the path to `node` executable by setting `copilot-node-executable`.)
+1. Install [copilot-node-server][]. (You can specify the path to its executable by setting `copilot-node-server-executable`.)
 
 2. Setup `copilot.el` as described in the next section.
 
-3. Install the copilot server by `M-x copilot-install-server`.
+3. Login to Copilot by `M-x copilot-login`. You can also check the status by `M-x copilot-diagnose` (`NotAuthorized` means you don't have a valid subscription).
 
-4. Login to Copilot by `M-x copilot-login`. You can also check the status by `M-x copilot-diagnose` (`NotAuthorized` means you don't have a valid subscription).
-
-5. Enjoy!
+4. Enjoy!
 
 ## Configurations
 
@@ -188,7 +186,6 @@ Please make sure you have these dependencies installed (available in ELPA/MELPA)
 + `dash`
 + `s`
 + `editorconfig`
-+ `f`
 
 After installing those, clone this repository then insert the below snippet into your config file.
 
@@ -272,9 +269,9 @@ Log out from GitHub.
 
 ## Customization
 
-#### copilot-node-executable
+#### copilot-node-server-executable
 
-The executable path of [Node.js][].
+The executable path of [copilot-node-server][].
 
 #### copilot-idle-delay
 
@@ -353,4 +350,4 @@ Please take a look at [copilot-chat.el](https://github.com/chep/copilot-chat.el)
 [@zerolfx]: https://github.com/zerolfx
 
 [GitHub Copilot]: https://github.com/features/copilot
-[Node.js]: https://nodejs.org/en/download/
+[copilot-node-server]: https://github.com/jfcherng/copilot-node-server
