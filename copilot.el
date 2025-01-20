@@ -136,7 +136,7 @@ find indentation offset."
 (defconst copilot-server-package-name "copilot-node-server"
   "The name of the package to install copilot server.")
 
-(defcustom copilot-version "1.27.0"
+(defcustom copilot-version "1.41.0"
   "Copilot version.
 
 The default value is the preferred version and ensures functionality.
@@ -306,6 +306,7 @@ SUCCESS-FN is the CALLBACK."
     (setq copilot--connection (copilot--make-connection))
     (message "Copilot agent started")
     (copilot--request 'initialize '(:capabilities (:workspace (:workspaceFolders t))))
+    (copilot--notify 'initialized '())
     (copilot--async-request
      'setEditorInfo
      `(:editorInfo
